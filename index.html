@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Camila Nail Designer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte cursiva elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BANNER / NOME -->
+    <header class="banner">
+        <h1>Camila Nail Designer</h1>
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+    <section class="apresentacao">
+        <h2>✨ Esmaltação em Gel ✨</h2>
+
+        <p>
+            Cuido das suas unhas com carinho e atenção aos detalhes.
+            A esmaltação em gel proporciona um acabamento bonito, delicado
+            e duradouro para você se sentir ainda mais especial.
+        </p>
+    </section>
+
+
+    <!-- CARROSSEL -->
+    <section class="carrossel-section">
+
+        <h2>Meus Trabalhos</h2>
+
+        <div class="carrossel">
+
+            <button class="seta esquerda" onclick="voltarFoto()">
+                &#10094;
+            </button>
+
+            <div class="foto-container">
+
+                <!-- EDITE AS FOTOS AQUI -->
+                <img src="img/18718154696169204.jpg" class="foto ativa" alt="Esmaltação em gel">
+                <img src="img/633387444812954.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/download (21).jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/Dreamy Yellow Floral Summer Nails Inspo 🌼✨.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/Francesinha.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/Instagram.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/Nails.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/novembre.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/The Biggest Nail Print and Pattern Trends for 2026.jpg" class="foto" alt="Esmaltação em gel">
+                <img src="img/unhas.jpg" class="foto" alt="Esmaltação em gel">
+
+            </div>
+
+            <button class="seta direita" onclick="proximaFoto()">
+                &#10095;
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FERRAMENTAS E EXTRAS -->
+    <section class="servicos">
+
+        <h2>Meu Atendimento</h2>
+
+        <div class="texto-servico">
+            <p>
+                ✦ Materiais higienizados e preparados com cuidado.
+            </p>
+
+            <p>
+                ✦ Produtos escolhidos para proporcionar um acabamento bonito.
+            </p>
+
+            <p>
+                ✦ Atenção aos detalhes durante todo o procedimento.
+            </p>
+
+            <p>
+                ✦ Atendimento cuidadoso, delicado e personalizado.
+            </p>
+
+            <p>
+                ✦ Tudo feito com carinho para valorizar suas unhas.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- AGENDAMENTO -->
+    <section class="agendamento">
+
+        <h2>Agende seu horário</h2>
+
+        <p>
+            Será um prazer cuidar das suas unhas! 💜
+        </p>
+
+        <a
+            href="https://wa.me/5500000000000"
+            class="botao-whatsapp"
+            target="_blank"
+        >
+            Agendar pelo WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- ENDEREÇO E HORÁRIO -->
+    <section class="informacoes">
+
+        <div class="panfleto">
+
+            <h2>Onde me encontrar</h2>
+
+            <p>
+                📍 Rua das Flores, 123<br>
+                Centro — Cidade/UF
+            </p>
+
+            <h2>Horário de funcionamento</h2>
+
+            <p>
+                Segunda a sábado<br>
+                Das 7h às 19h
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>Camila Nail Designer 💜</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT DO CARROSSEL -->
+    <script>
+
+        let fotoAtual = 0;
+
+        const fotos = document.querySelectorAll(".foto");
+
+        function mostrarFoto(numero) {
+
+            fotos.forEach(foto => {
+                foto.classList.remove("ativa");
+            });
+
+            fotos[numero].classList.add("ativa");
+        }
+
+        function proximaFoto() {
+
+            fotoAtual++;
+
+            if (fotoAtual >= fotos.length) {
+                fotoAtual = 0;
+            }
+
+            mostrarFoto(fotoAtual);
+        }
+
+        function voltarFoto() {
+
+            fotoAtual--;
+
+            if (fotoAtual < 0) {
+                fotoAtual = fotos.length - 1;
+            }
+
+            mostrarFoto(fotoAtual);
+        }
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

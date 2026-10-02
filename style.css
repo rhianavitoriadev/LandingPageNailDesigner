@@ -1,0 +1,386 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #4b315f;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 38px;
+    color: #6d3f82;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    width: 100%;
+    min-height: 190px;
+
+    background-color: #8e5aa9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estampa floral do banner */
+
+.banner::before,
+.banner::after {
+    content: "✿  ❀  ✿  ❀  ✿";
+    position: absolute;
+
+    color: #70418a;
+    font-size: 45px;
+    opacity: 0.35;
+    letter-spacing: 20px;
+}
+
+.banner::before {
+    top: 20px;
+    left: -30px;
+}
+
+.banner::after {
+    bottom: 15px;
+    right: -30px;
+}
+
+.banner h1 {
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size: 64px;
+    font-weight: 700;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.apresentacao {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.apresentacao p {
+    background-color: #8e5aa9;
+    color: white;
+
+    padding: 25px 35px;
+    border-radius: 15px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CARROSSEL
+========================= */
+
+.carrossel-section {
+    padding: 40px 20px;
+}
+
+.carrossel {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Área onde a foto fica */
+
+.foto-container {
+    width: 600px;
+    height: 420px;
+
+    background-color: #8e5aa9;
+
+    border: 8px solid #8e5aa9;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    /* Estampa floral */
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            #70418a 0,
+            #70418a 8px,
+            transparent 9px
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            #70418a 0,
+            #70418a 8px,
+            transparent 9px
+        );
+
+    background-size: 70px 70px;
+}
+
+
+/* Fotos */
+
+.foto {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+}
+
+.foto.ativa {
+    display: block;
+}
+
+
+/* =========================
+   SETAS
+========================= */
+
+.seta {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    background-color: white;
+
+    border: 3px solid #8e5aa9;
+    border-radius: 12px;
+
+    color: #8e5aa9;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.seta:hover {
+    background-color: #8e5aa9;
+    color: white;
+}
+
+
+/* =========================
+   SERVIÇOS / FERRAMENTAS
+========================= */
+
+.servicos {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 0 25px;
+}
+
+.texto-servico {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.texto-servico p {
+    background-color: #8e5aa9;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   AGENDAMENTO
+========================= */
+
+.agendamento {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin: 70px auto;
+    padding: 40px 20px;
+}
+
+.agendamento p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+
+/* BOTÃO WHATSAPP */
+
+.botao-whatsapp {
+    display: inline-block;
+
+    background-color: #25D366;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-whatsapp:hover {
+    background-color: #128C7E;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   ENDEREÇO E HORÁRIO
+========================= */
+
+.informacoes {
+    display: flex;
+    justify-content: center;
+
+    padding: 50px 20px 80px;
+}
+
+.panfleto {
+    width: 90%;
+    max-width: 600px;
+
+    background-color: #f8dce8;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    color: #222;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.panfleto h2 {
+    color: #6d3f82;
+}
+
+.panfleto p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: #8e5aa9;
+
+    color: white;
+}
+
+footer p {
+    font-family: "Dancing Script", cursive;
+    font-size: 24px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    .banner {
+        min-height: 150px;
+    }
+
+    .banner h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .carrossel {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .foto-container {
+        width: 70%;
+        height: 300px;
+    }
+
+    .seta {
+        width: 45px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .apresentacao p {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .panfleto {
+        padding: 30px 20px;
+    }
+}
